@@ -4,7 +4,7 @@
     "main": "src/index.js",
     "license": "MIT",
     "scripts": {
-        "lint": "eslint ./src/**/*.js",
+        "lint": "eslint --cache",
         "prepare": "husky install",
         "lint-staged": "lint-staged"
     },
@@ -20,9 +20,9 @@
     },
     "lint-staged": {
         "!(ignore/**/*)*.js": [
-            "eslint",
+            "yarn lint",
             "prettier --write"
-          ]
+        ]
     },
     "devDependencies": {
         "eslint": "^7.32.0",
