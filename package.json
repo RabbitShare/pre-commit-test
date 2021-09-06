@@ -6,7 +6,7 @@
     "scripts": {
         "lint": "eslint ./src/**/*.js",
         "prepare": "husky install",
-        "lint-staged": "yarn lint-staged"
+        "lint-staged": "lint-staged"
     },
     "eslintConfig": {
         "env": {
@@ -20,7 +20,7 @@
     },
     "lint-staged": {
         "!(path/to/excluded/dir/**/*)*.ts": [
-            "eslint --fix",
+            "eslint",
             "prettier --write"
           ]
     },
