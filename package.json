@@ -19,7 +19,7 @@
         ]
     },
     "lint-staged": {
-        "!(path/to/excluded/dir/**/*)*.ts": [
+        "!(ignore/**/*)*.js": [
             "eslint",
             "prettier --write"
           ]
