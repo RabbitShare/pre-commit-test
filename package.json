@@ -1,0 +1,36 @@
+{
+    "name": "eslint-test",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint ./src/**/*.js",
+        "prepare": "husky install",
+        "lint-staged": "yarn lint-staged"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es2021": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "prettier"
+        ]
+    },
+    "lint-staged": {
+        "!(path/to/excluded/dir/**/*)*.ts": [
+            "eslint --fix",
+            "prettier --write"
+          ]
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "husky": "^7.0.2",
+        "lint-staged": "^11.1.2",
+        "prettier": "^2.3.2"
+    }
+}

@@ -1,0 +1,4 @@
+const qwae
+asd = () => {
+    asdqАф
+}
